@@ -8,6 +8,10 @@
     --maincontainerStrach: 500px;
 }
 
+body {
+    padding: 0;
+}
+
 h1{
     padding: 20px 0;
     text-align: center;
