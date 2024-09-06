@@ -9,6 +9,7 @@ const add_logo = document.querySelector('.add_logo');
 const listBox = document.getElementById('listBox');
 const insertBTN = document.getElementById('insert');
 const mainContainer = document.querySelector('.main');
+const music = new Audio('./mixkit-retro-game-notification-212.wav');
 let ProgressLineData = [];
 let pointsCount = 5;
 let parclickDist = 0;
@@ -22,6 +23,7 @@ const moveBar = (totalPoints, screenSize = window.innerWidth) => {
     parclickDist = Math.round(100/(totalPoints-1));
     totalLength += parclickDist;
     clicks++
+    music.play();
     if (screenSize >= 500) {
         barIndicator.style.width = `${totalLength}%`;
     } else {
