@@ -8,10 +8,6 @@
     --maincontainerStrach: 500px;
 }
 
-body {
-    padding: 30px;
-}
-
 h1{
     padding: 20px 0;
     text-align: center;
@@ -112,22 +108,6 @@ h1{
     position: relative;
 }
 
-/* #newPics::after{
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: rgb(12, 248, 8);
-    right: -10px;
-    bottom: -10px;
-    transition: all .4s ease-in-out;
-}
-
-#newPics:hover #newPics::after{
-    left: -10px;
-    top: -10px;
-} */
 
 .add_panel{
     opacity: 0;
