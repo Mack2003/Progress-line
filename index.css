@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --maincontainerStrach: 500px;
+}
+
+body {
+    padding: 30px;
+}
+
+h1{
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.holder{
+    margin: 30px 0;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    max-width: 90vw;
+    min-width: 100px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.bar_con {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #8d8989;
+    z-index: -1;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bar_indic {
+    height: 100%;
+    width: 1%;
+    background-color: rgb(7, 219, 70);
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    max-width: 100%;
+    transition: all .2s linear;
+}
+
+
+.points_con {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.points {
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: #8d8989;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.cont_con {
+    display: flex;
+    justify-content: space-between;
+}
+
+#next{
+    padding: 5px 10px;
+    margin: 20px;
+    background-color: rgb(7, 220, 7);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: x-large;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+.glow{
+    border: 6px solid rgb(0, 140, 255);
+    background-color: white;
+}
+
+#newPics{
+    padding: 5px 10px;
+    font-size: large;
+    background-color: rgb(0, 140, 255);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+}
+
+/* #newPics::after{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(12, 248, 8);
+    right: -10px;
+    bottom: -10px;
+    transition: all .4s ease-in-out;
+}
+
+#newPics:hover #newPics::after{
+    left: -10px;
+    top: -10px;
+} */
+
+.add_panel{
+    opacity: 0;
+    top: -100vh;
+    z-index: 3;
+    position: fixed;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 6px 2px grey;
+    transition: all .4s ease-in-out;
+}
+
+.crossLogo{
+    float: right;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.add_panel h3{
+    padding: 30px 0;
+    font-weight: bolder;
+    background-color: rgb(7, 220, 7);
+}
+
+.add_panel div{
+    padding: 8px 5px;
+    width: fit-content;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(94, 93, 93, 0.657);
+}
+
+.add_panel div input{
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 0 5px;
+    outline: none;
+    padding-left: 2px;
+}
+
+#number{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.add_logo{
+    cursor: pointer;
+}
+
+#listBox{
+    margin: 5px;
+    padding: 5px;
+    font-weight: bolder;
+    color: #8d8989ab;
+    user-select: none;
+    width: 90%;
+    overflow: scroll;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 4px double rgb(162, 159, 159);
+}
+
+#insert{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: large;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    cursor: pointer;
+}
+
+.showAddPanel{
+    opacity: 1;
+    top: 10vh;
+}
+.listCard{
+    min-width: 100px;
+    box-shadow: 0 0 3px 1px grey;
+}
+
+#listDeletBTN{
+    color: red;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .main {
+        flex-direction: column;
+        height: var(--maincontainerStrach);
+    }
+
+    .content {
+        bottom: 0;
+        left: 15%;
+    }
+
+    .bar_con {
+        height: var(--maincontainerStrach);
+        width: 4px;
+        left: 7px;
+    }
+
+    .bar_indic {
+        height: 1%;
+        width: 100%;
+        background-color: rgb(7, 219, 70);
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        max-width: 100%;
+        max-height: 100% !important;
+        transition: all .2s linear;
+    }
+
+}
+
+@media (max-width: 400px){
+    .add_panel{
+        width: 100%;
+        margin-left: 0;
+    }
+}
